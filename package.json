@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Incremental detection of code comments",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "cad": "./bin/cad.js"
   },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tarotlwei/code_annotation_detection.git"
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tarotlwei/code_annotation_detection/issues"
   },
-  "homepage": "https://github.com/tarotlwei/code_annotation_detection#readme"
+  "homepage": "https://github.com/tarotlwei/code_annotation_detection#readme",
+  "dependencies": {
+    "commander": "^8.0.0"
+  }
 }
