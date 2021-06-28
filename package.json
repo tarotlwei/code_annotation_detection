@@ -6,7 +6,9 @@
   "bin": {
     "cad": "./bin/cad.js"
   },
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint src"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tarotlwei/code_annotation_detection.git"
@@ -19,5 +21,8 @@
   "homepage": "https://github.com/tarotlwei/code_annotation_detection#readme",
   "dependencies": {
     "commander": "^8.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0"
   }
 }

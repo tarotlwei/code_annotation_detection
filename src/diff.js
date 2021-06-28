@@ -14,7 +14,7 @@ function getDiffInfo(diffContent) {
   const content = diffContent.split('\n');
   const info = [];
   let curIndex = -1;
-  const reg = /^@@\s[+|-]{1}([0-9]+(,[0-9]+)?)\s[+|-]{1}([0-9]+(\,[0-9]+)?)\s@@/;
+  const reg = /^@@\s[+|-]{1}([0-9]+(,[0-9]+)?)\s[+|-]{1}([0-9]+(,[0-9]+)?)\s@@/;
   content.forEach(item => {
     if (item.startsWith('@@')) {
       // @@开头的再进行正则匹配，避免每行都正则匹配

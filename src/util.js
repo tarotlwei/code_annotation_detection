@@ -21,7 +21,7 @@ function spawnUtil({ cmd, arg, success }) {
 }
 
 function getGitDiffContent(filePath) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     spawnUtil({
       cmd: 'git',
       arg: ['diff', '--cached', filePath],
