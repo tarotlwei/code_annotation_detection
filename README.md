@@ -4,7 +4,7 @@ Incremental detection of code comments
 # How to use
 
 ## Install
-> `npm install code-annotation-detection`
+> `npm install -D code-annotation-detection`
 
 ## use
 > package.json

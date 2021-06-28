@@ -13,6 +13,8 @@ async function main(option) {
     // 阻塞后续
     console.error('code annotation detection no pass');
     process.exit(1);
+  } else {
+    process.exit(0);
   }
 }
 
