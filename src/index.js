@@ -11,7 +11,8 @@ async function main(option) {
   
   if (option.brk && !pass) {
     // 阻塞后续
-    throw new Error('code annotation detection no pass');
+    console.error('code annotation detection no pass');
+    process.exit(1);
   }
 }
 
