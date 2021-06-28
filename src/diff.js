@@ -14,7 +14,7 @@ function getDiffInfo(diffContent) {
   const content = diffContent.split('\n');
   const info = [];
   let curIndex = -1;
-  const reg = /^@@\s[\+|\-]{1}([0-9]+(\,[0-9]+)?)\s[\+|\-]{1}([0-9]+(\,[0-9]+)?)\s@@/;
+  const reg = /^@@\s[+|-]{1}([0-9]+(,[0-9]+)?)\s[+|-]{1}([0-9]+(\,[0-9]+)?)\s@@/;
   content.forEach(item => {
     if (item.startsWith('@@')) {
       // @@开头的再进行正则匹配，避免每行都正则匹配
@@ -51,7 +51,7 @@ function hasOtherCodeInLine(annotationInfos, curLineNumber, codeLineInfo) {
     }
   } else {
     const section = [];
-    annotationInfos.forEach((item, index) => {
+    annotationInfos.forEach((item) => {
       if ((item.start.row !== item.end.row) && item.end.row === curLineNumber) {
         section.push({
           start: 1,
@@ -110,10 +110,6 @@ function compareAnnotationDiff(changeLines, fileAnnotationInfo, fileView) {
   while (changeLinesIndex < changeLines.length) {
     const curLineNumber = changeLines[changeLinesIndex];
     const curAnnotationInfo = fileAnnotationInfo[fileAnnotationInfoIndex];
-
-    if (otherLineCount === 16) {
-      debugger;
-    }
 
     if (!curAnnotationInfo) {
       // 后面的行都没有注释了
