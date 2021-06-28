@@ -1,0 +1,19 @@
+{
+  "name": "code_annotation_detection",
+  "version": "1.0.0",
+  "description": "Incremental detection of code comments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarotlwei/code_annotation_detection.git"
+  },
+  "author": "tarotlwei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarotlwei/code_annotation_detection/issues"
+  },
+  "homepage": "https://github.com/tarotlwei/code_annotation_detection#readme"
+}
