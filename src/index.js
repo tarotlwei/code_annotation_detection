@@ -25,10 +25,14 @@ async function run(option) {
     stagedFileListString.split('\n').forEach(item => {
       const char = item.charAt(0);
       if (char === "M" || char === "A") {
-        fileNameList.push({
-          filePath: item.substring(3),
-          type: char
-        });
+        const filePath = item.substring(3);
+        const fileType = filePath.substring(filePath.lastIndexOf('.') + 1, filePath.length);
+        if (['js', 'ts', 'tsx', 'vue'].indexOf(fileType) > -1) {
+          fileNameList.push({
+            filePath: filePath,
+            type: char
+          });
+        }
       }
     });
   }
@@ -62,6 +66,11 @@ async function run(option) {
   }
 
   if (option.foreach) {
+    return pass;
+  }
+
+  if (totalLineCount < Number(option.min)) {
+    console.log(`代码变更${totalLineCount}行,小于${option.min}行，不进行代码注释率校验`);
     return pass;
   }
 
