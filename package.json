@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/tarotlwei/code_annotation_detection#readme",
   "dependencies": {
-    "commander": "^8.0.0"
+    "commander": "^2.20.3"
   },
   "devDependencies": {
     "eclint": "^2.8.1",
