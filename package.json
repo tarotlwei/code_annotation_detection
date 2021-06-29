@@ -1,6 +1,6 @@
 {
   "name": "code-annotation-detection",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Incremental detection of code comments",
   "main": "src/index.js",
   "bin": {
